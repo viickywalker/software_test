@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application { // this identifies which class contains the entry point to the program to the program
+    // the entry point ALWAYS = method called main, so we're saying main is in the class Main
+    mainClass = 'Main'
+}
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Libraries to use for Unit Testing
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
