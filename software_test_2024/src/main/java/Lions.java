@@ -24,5 +24,4 @@ public class Lions extends Agents{
         g.drawString(age, 50,50);
     }
 
-
 }
